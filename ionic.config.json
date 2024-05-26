@@ -1,0 +1,7 @@
+{
+  "name": "home-server-front",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
