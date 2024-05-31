@@ -1,0 +1,45 @@
+ion-menu-button {
+  color: var(--ion-color-primary);
+}
+
+
+
+.background {
+  // --background: linear-gradient(to bottom, var(--ion-color-primary) 30%, var(--ion-color-light), 70%);
+  --background: linear-gradient(#1a9269 0%,
+      #1a9269 30%,
+
+      rgb(247, 247, 247) 30%,
+      rgb(247, 247, 247) 100%);
+}
+
+@keyframes wave {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    /* Adjust the wave height */
+  }
+}
+
+#container {
+  display: flex;
+}
+
+
+.devices-list {
+  display: flex;
+  border: 1px solid;
+  background: white;
+  height: fit-content;
+  width: -webkit-fill-available;
+  padding: 16px;
+  span {
+    flex-grow: 1;
+    font-size: 2em;
+  }
+  ion-toggle {
+    align-content: center;
+  }
+}

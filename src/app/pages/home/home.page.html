@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ folder }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="background" [fullscreen]="true">
+  <ion-grid class="page">
+    <ion-row>
+      <ion-col>
+        <app-temperature-card></app-temperature-card>
+      </ion-col>
+      <ion-col class="col-rigth">
+        <ion-card class="devices-list " *ngFor="let device of devices">
+          <span>{{device.name}}</span>
+          <ion-toggle class="toggle " [checked]="device.status" (ionChange)="deviceToggle(device, $event)"></ion-toggle>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <app-temperature-card></app-temperature-card>
+          </ion-col>
+      <ion-col class="col-rigth">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

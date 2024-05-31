@@ -1,0 +1,41 @@
+<ion-card>
+  <ion-card-content>
+        <ion-col size="6">
+          <ion-card-title class="temperature">
+            <span class="primary-color">{{air.temperature}}°</span>
+          </ion-card-title>
+          <ion-card-subtitle class="subtitle">Temp</ion-card-subtitle>
+          <ion-card-title class="humidity">
+            <span>{{air.humidity}}%</span>
+          </ion-card-title>
+          <ion-card-subtitle class="subtitle">Humidity</ion-card-subtitle>
+        </ion-col>
+        <ion-col size="6">
+          <ion-card-title class="temperature outside" >
+            <ion-row *ngIf="forecast">
+              <div>
+              </div>
+              <div class="d-flex ustify-content-center align-items-center">
+                <span class="">{{forecast.current.temperature2m | number: '1.0-0'}}°</span>
+              </div>
+            </ion-row>
+          </ion-card-title>
+          <ion-card-subtitle class="subtitle">Outside</ion-card-subtitle>
+        </ion-col>
+
+  </ion-card-content>
+    <div class="footer">
+      <div class="humidity-bar">
+        <div class="arrow" style="left: 50%;">▼</div>
+        <div class="yellow"></div>
+        <div class="green"></div>
+        <div class="blue"></div>
+      </div>
+      <div class="subtitle">
+        <div class="dry">Dry</div>
+        <div class="confort">Confort</div>
+        <div class="wet">Wet</div>
+      </div>
+    </div>
+
+</ion-card>

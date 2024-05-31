@@ -1,3 +1,6 @@
 {
+    "workbench.colorCustomizations": {
+      "sideBar.background": "#03001d" // Replace with your desired color
+    },
   "typescript.preferences.autoImportFileExcludePatterns": ["@ionic/angular/common", "@ionic/angular/standalone"]
 }
